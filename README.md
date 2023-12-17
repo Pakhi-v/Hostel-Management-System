@@ -1,5 +1,5 @@
 # Hostel-Management-System
-This is a simple Go project that uses Gofr framework and provides a RESTful API for managing a Hostel.
+This is a simple Go project that uses Gofr framework and provides a RESTful API for managing a Hoste for College.
 
 # API Endpoints
 1) GET/student/{id}: Get a details of the student by id.
