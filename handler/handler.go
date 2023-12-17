@@ -3,10 +3,10 @@ package handler
 import (
 	"strconv"
 
-	"gofr.dev/pkg/errors"
-	"gofr.dev/pkg/gofr"
 	"github.com/Pakhi-v/Hostel-Management-System/datastore"
 	"github.com/Pakhi-v/Hostel-Management-System/model"
+	"gofr.dev/pkg/errors"
+	"gofr.dev/pkg/gofr"
 )
 
 type handler struct {
@@ -20,7 +20,7 @@ func New(s datastore.Student) handler {
 func (h handler) GetByID(ctx *gofr.Context) (interface{}, error) {
 	// ctx.PathParam() returns the path parameter from HTTP request.
 	id := ctx.PathParam("id")
-	
+
 	if id == "" {
 		return nil, errors.MissingParam{Param: []string{"id"}}
 	}
@@ -43,21 +43,21 @@ func (h handler) GetByID(ctx *gofr.Context) (interface{}, error) {
 	return response, nil
 }
 
-var patient model.Student
+var patient model.student
 
 // ctx.Bind() binds the incoming data from the HTTP request to a provided interface (i).
 func (h handler) Create(ctx *gofr.Context) (interface{}, error) {
-if err := ctx.Bind(&student); err != nil {
-	ctx.Logger.Errorf("error in binding: %v", err)
-	return nil, errors.InvalidParam{Param: []string{"body"}}
-}
+	if err := ctx.Bind(&Student); err != nil {
+		ctx.Logger.Errorf("error in binding: %v", err)
+		return nil, errors.InvalidParam{Param: []string{"body"}}
+	}
 
-resp, err := h.store.Create(ctx, &student)
-if err != nil {
-	return nil, err
-}
+	resp, err := h.store.Create(ctx, &Student)
+	if err != nil {
+		return nil, err
+	}
 
-return resp, nil
+	return resp, nil
 }
 
 func (h handler) Update(ctx *gofr.Context) (interface{}, error) {

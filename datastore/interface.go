@@ -1,8 +1,6 @@
 package datastore
 
 import (
-	"github.com/Pakhi-v/Hostel-Management-System/model"
-
 	"gofr.dev/pkg/gofr"
 )
 
