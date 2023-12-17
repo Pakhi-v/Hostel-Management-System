@@ -1,0 +1,34 @@
+{
+"info": {
+    "_postman_id": "21099040-75e6c5ad-5b9d-4532-b223-540f0f376ffc",
+    "name": "Studentdata",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31848544"
+},
+"item": [
+    {
+        "name": "GET request",
+        "request": {
+            "method": "GET",
+            "header": []
+        },
+        "response": []
+    },
+    {
+        "name": "POST",
+        "request": {
+            "method": "POST",
+            "header": []
+        },
+        "response": []
+    },
+    {
+        "name": "DELETE",
+        "request": {
+            "method": "DELETE",
+            "header": []
+        },
+        "response": []
+    }
+]
+}
