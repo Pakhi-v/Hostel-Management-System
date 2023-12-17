@@ -1,13 +1,23 @@
 package main
 
-import "gofr.dev/pkg/gofr"
+import (
+	"Hostel-Management-System/datastore"
+	"Hostel-Management-System/handler"
+	"gofr.dev/pkg/gofr"
+)
 
 func main() {
 	app := gofr.New()
 
-	app.GET("/", func(ctx *gofr.Context) (interface{}, error) {
-		return "Hello World!", nil
-	})
+	s := datastore.New()
+	h := handler.New(s)
 
+	app.GET("/student/{id}", h.GetByID)
+	app.POST("/student", h.Create)
+	app.PUT("/student/{id}", h.Update)
+	app.DELETE("/student/{id}", h.Delete)
+
+	// starting the server on a custom port
+	app.Server.HTTP.Port = 8000
 	app.Start()
 }
