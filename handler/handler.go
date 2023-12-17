@@ -36,7 +36,7 @@ func (h handler) GetByID(ctx *gofr.Context) (interface{}, error) {
 
 	if err != nil {
 		return nil, errors.EntityNotFound{
-			Entity: "Patients",
+			Entity: "Students",
 			ID:     id,
 		}
 	}
