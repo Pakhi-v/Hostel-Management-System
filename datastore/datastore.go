@@ -7,7 +7,7 @@ import (
 	"gofr.dev/pkg/errors"
 	"gofr.dev/pkg/gofr"
 
-	"Hostel-Management-System/model"
+	"github.com/Pakhi-v/Hostel-Management-System/model"
 )
 
 type host struct{}

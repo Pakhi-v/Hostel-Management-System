@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Hostel-Management-System/datastore"
-	"Hostel-Management-System/handler"
+	"github.com/Pakhi-v/Hostel-Management-System/datastore"
+	"github.com/Pakhi-v/Hostel-Management-System/handler"
 	"gofr.dev/pkg/gofr"
 )
 

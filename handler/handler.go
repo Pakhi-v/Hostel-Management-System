@@ -5,8 +5,8 @@ import (
 
 	"gofr.dev/pkg/errors"
 	"gofr.dev/pkg/gofr"
-	"Hostel-Management-System/datastore"
-	"Hostel-Management-System/model"
+	"github.com/Pakhi-v/Hostel-Management-System/datastore"
+	"github.com/Pakhi-v/Hostel-Management-System/model"
 )
 
 type handler struct {
