@@ -10,7 +10,7 @@ import (
 	"Hostel-Management-System/model"
 )
 
-type hospi struct{}
+type host struct{}
 
 func New() *host {
 	return &host{}
